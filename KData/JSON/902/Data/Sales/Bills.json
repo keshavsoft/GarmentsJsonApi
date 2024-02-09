@@ -1,4 +1,1 @@
-{
-    "POS": {},
-    "BillsQrCode": {}
-}
+{"POS":{"1":{"pk":"","BillNumber":"1","Date":"2024-02-09","InvGrid":{},"CustomerName":"RAMA","ContactNumber":"","CustomerNumber":"999999","PaymentMode":"UPI Bill","GSTNumber":"GST99","DateTime":"2024-02-09T07:55:24.893Z","UserPK":902}},"BillsQrCode":{"1":{"ProductName":"ITEM1","UnitRate":550,"pk":1,"sno":1,"Barcode":"M-1","DisPercentage":10,"DisRate":55,"GrossAmout":495,"Qty":null,"BillPk":"1"}}}
