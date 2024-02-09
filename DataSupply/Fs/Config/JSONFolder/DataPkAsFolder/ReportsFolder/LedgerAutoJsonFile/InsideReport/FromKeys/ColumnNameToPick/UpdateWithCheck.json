@@ -1,0 +1,10 @@
+{
+    "ItemName": "StockBalances",
+    "voucher": "20",
+    "BodyAsJson":{
+        "FolderName":"Transactions",
+        "FileName":"BANK-WITHDRAWALS",
+        "ItemName":"BANK-WITHDRAWAL",
+        "ColumnNameToPick":"FinGrid"
+    }
+}

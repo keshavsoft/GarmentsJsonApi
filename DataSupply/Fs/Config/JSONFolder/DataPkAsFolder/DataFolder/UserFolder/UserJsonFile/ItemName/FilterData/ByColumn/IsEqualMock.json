@@ -1,0 +1,11 @@
+{
+    "inFileNameOnly": "Generate",
+    "inFolderName": "QrCodes",
+    "inItemName": "Barcodes",
+    "inColumnName": "GenerateReference['ReferncePk']",
+    "inValueToCheck": {
+        "GenerateReference": {
+            "ReferncePk": "2"
+        }
+    }
+}

@@ -1,0 +1,10 @@
+POST http://localhost:4119/JSONApi/Api/Data/FromFolder/FromFile/Items/FromDataFolder/FilterData/ByColumn/IsEqual
+content-type: application/json
+
+{
+    "inFolderName": "",
+    "inFileNameOnly": "",
+    "inItemName": "",
+    "inColumnName": "",
+    "inValueToCheck": ""
+}

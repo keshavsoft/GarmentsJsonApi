@@ -1,0 +1,7 @@
+POST http://localhost:4119/JSONUser/Admin/Api/InAdminDataJson/Check/TokenToCookie
+content-type: application/json
+ 
+{   
+"inUserName":"KESHAV",
+"inPassword":"KESHAV"
+}

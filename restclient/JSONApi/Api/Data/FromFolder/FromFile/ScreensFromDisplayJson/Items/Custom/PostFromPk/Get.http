@@ -1,0 +1,6 @@
+GET http://localhost:4119/JSONApi/Api/Data/FromFolder/FromFile/ScreensFromDisplayJson/Items/Custom/PostFromPk/130
+content-type: application/json
+
+{
+
+}

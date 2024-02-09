@@ -1,0 +1,56 @@
+let CommonPullData = require("../../../../../DataSupply/Fs/LoginFolder/UserDataJson/PullData/FromFile");
+let CommonPushData = require("../../../../../DataSupply/Fs/LoginFolder/UserDataJson/PushData//ToJsonFile");
+let CommonMock = require("../../../../MockAllow.json");
+
+
+let WithDataPk = async ({ inDataPk, inUserName, inPassword }) => {
+
+    let LocalReturnData = { KTF: false, DirPath: "", CreatedLog: {} };
+    let LocalFromfileData = await CommonPullData.StartFunc();
+
+    if (LocalFromfileData.KTF) {
+        if ("JsonData" in LocalFromfileData) {
+            let LocalToBeInsertedData = JSON.parse(JSON.stringify(LocalFromfileData.JsonData));
+            if ("data" in LocalToBeInsertedData) {
+                if (inDataPk in LocalToBeInsertedData.data) {
+                    LocalReturnData.KReason = `Data with PK : ${inDataPk} is already found on the server!`;
+                    return await LocalReturnData;
+                };
+
+                LocalToBeInsertedData.data[inDataPk] = {
+                    UserName: inUserName,
+                    PassWord: inPassword
+                };
+                
+                if (Object.keys(LocalToBeInsertedData.data).length > Object.keys(LocalFromfileData.JsonData.data).length) {
+                    let LocalFromUpdate = await CommonPushData.StartFunc({
+                        inOriginalData: LocalFromfileData.JsonData,
+                        inDataToUpdate: LocalToBeInsertedData
+                    });
+
+                    if (LocalFromUpdate.KTF) {
+                        LocalReturnData.KTF = true;
+                    };
+                };
+            };
+        }
+    };
+
+    return await LocalReturnData;
+
+};
+
+if (CommonMock.AllowMock) {
+    if (CommonMock.MockKey === 'VV') {
+        let LocalMockData = require('./NewUserWithPK.json');
+
+        WithDataPk({
+            ...LocalMockData
+        }).then(PromiseData => {
+            console.log('PromiseData : ', PromiseData);
+        });
+    };
+};
+
+
+module.exports = { WithDataPk };

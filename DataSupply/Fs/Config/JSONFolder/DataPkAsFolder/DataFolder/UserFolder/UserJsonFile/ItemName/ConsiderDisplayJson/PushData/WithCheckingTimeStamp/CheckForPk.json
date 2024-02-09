@@ -1,0 +1,19 @@
+{
+    "inFolderName": "Factory",
+    "inFileNameOnly": "FactoryScan",
+    "inFileName": "FactoryScan",
+    "inItemName": "FactoryScan",
+    "inScreenName": "Create",
+    "inDataToInsert": {
+        "pk": "34",
+        "ItemName": "M Shirt DW",
+        "Rate": "60",
+        "FactorySelected": "Vizag",
+        "VoucherRef": "2",
+        "VoucherNumber": "3",
+        "DCFactory": "Vizag",
+        "BranchName": "Kakinada",
+        "DCDate": "2023-11-06",
+        "DCDescription": "By Truck"
+    }
+}

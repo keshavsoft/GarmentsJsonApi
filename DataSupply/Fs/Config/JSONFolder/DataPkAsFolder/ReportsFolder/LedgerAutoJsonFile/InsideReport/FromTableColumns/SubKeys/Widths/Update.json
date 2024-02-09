@@ -1,0 +1,7 @@
+{
+    "ReportName": "PurchasesDate",
+    "DataAttribute": "AccountName",
+    "BodyAsJson": {
+        "px": "66"
+    }
+}

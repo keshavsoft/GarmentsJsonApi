@@ -1,0 +1,22 @@
+{
+    "pk": "1",
+    "InsertKey": "InvGrid",
+    "JsonConfig": {
+        "inFolderName": "Transactions",
+        "inJsonFileName": "GST-SALES.json"
+    },
+    "ItemConfig": {
+        "inItemName": "GST-SALE",
+        "inScreenName": "Alter"
+    },
+    "MainRowPK": "1",
+    "SubTableRowPK": "1",
+    "inDataToUpdate": {
+        "sno": 1,
+        "InvGridAccountCode": 709,
+        "ProductCode": 2476,
+        "Qty": 166666666,
+        "Amount": 400001,
+        "UnitRate": 40000
+    }
+}
