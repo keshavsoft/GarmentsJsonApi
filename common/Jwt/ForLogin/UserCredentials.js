@@ -4,6 +4,11 @@ let CommonFromDataSupply = require("../../../DataSupply/Fs/Config/JSONFolder/Dat
 
 exports.CreateToken = ({ inUserName, inDataPk }) => {
     return new Promise((resolve, reject) => {
+
+        if ("KS_TOKEN_FORLOGIN" in process.env === false) {
+            return  reject("KS_TOKEN_FORLOGIN not found in .env file");
+        };
+        
         let LocalToken = process.env.KS_TOKEN_FORLOGIN;
 
         jwt.sign({ UserName: inUserName, DataPk: inDataPk }, LocalToken, (err, token) => {
